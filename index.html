@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fuel Consumption Calculator</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <h1>Fuel Consumption Calculator</h1>
+        <form id="fuel-form">
+            <div class="fuel-entry">
+                <label for="fuel-type">Fuel Type:</label>
+                <select id="fuel-type" name="fuel-type">
+                    <option value="diesel">Diesel</option>
+                    <option value="gasoline">Gasoline</option>
+                    <option value="lpg">LPG</option>
+                    <option value="ng">Natural Gas</option>
+                    <option value="light-fuel-oil">Light Fuel Oil</option>
+                    <option value="heavy-fuel-oil">Heavy Fuel Oil</option>
+                    <option value="base-oil">Base Oil</option>
+                    <option value="used-oil">Used Oil</option>
+                </select>
+            </div>
+            <div class="fuel-entry">
+                <label for="invoice-amount">Invoice Amount:</label>
+                <input type="number" id="invoice-amount" name="invoice-amount" required>
+            </div>
+            <div class="fuel-entry">
+                <label for="working-days">Working Days per Week:</label>
+                <select id="working-days" name="working-days">
+                    <option value="5">5 Days</option>
+                    <option value="7">7 Days</option>
+                </select>
+            </div>
+            <button type="button" id="add-fuel">Add Another Fuel</button>
+            <button type="submit">Calculate</button>
+        </form>
+        <div id="results"></div>
+    </div>
+    <script src="scripts/calculator.js"></script>
+</body>
+</html>
